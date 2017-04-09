@@ -13,12 +13,17 @@ class LocationService {
 	def findAll(def key, def value) {
 		
 		def query = "{ it -> it." + key + " == \'" + value +"\' }";
+		
+		return findAll (query)
+	}
+	
+	def findAll( def query ) {
 		def sh = new GroovyShell()
 		def closure = sh.evaluate(query)
 		
 		return locations.findAll ( closure )
 	}
-	
+ 	
 	def findZipCode (def zipCode) {
 		return findAll ('zip', zipCode)
 	}
