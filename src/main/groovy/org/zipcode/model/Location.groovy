@@ -12,6 +12,9 @@ class Location {
 	String latitude
 	String longitude
 	
+	Location() {
+	}
+	
 	Location(String[] elements) {
 		city = elements[0]
 		state = elements[1]

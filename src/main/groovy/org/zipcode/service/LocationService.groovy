@@ -1,5 +1,6 @@
 package org.zipcode.service
 
+import org.zipcode.model.Location
 import org.zipcode.utils.IOUtils
 
 class LocationService {
@@ -28,6 +29,15 @@ class LocationService {
 	
 	def findCities (def stateName) {
 		return findAll ('state', '==', stateName)
+	}
+	
+	def withinLatLon(def lat, def lng, def distance)
+	{
+		def location = new Location()
+		location.latitude = lat
+		location.longitude = lng
+		
+		return within(location, distance)	
 	}
 	
 	def within(def location, def distance) {

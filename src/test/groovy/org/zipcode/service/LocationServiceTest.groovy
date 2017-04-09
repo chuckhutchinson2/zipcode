@@ -43,6 +43,13 @@ class LocationServiceTest {
 	}
 	
 	@Test
+	public void withinLatLon() {
+		def locations = locationService.withinLatLon("39.2074", "77.2311", 3.0)
+		
+		print locations
+	}
+	
+	@Test
 	public void within3MilesOf20850() {
 		def zip20850 = locationService.findZipCode('20850')
 		
