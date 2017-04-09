@@ -36,7 +36,7 @@ class LocationService {
 	
 	def within(def places, def location, def distance) {
 		
-		return places.findAll { it -> distanceBetween (location, it) < distance }
+		return places.findAll { it -> distanceBetween (location, it) <= distance }
 	}
 
 	def distanceBetween(def loc1, def loc2) {

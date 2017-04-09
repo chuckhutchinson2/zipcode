@@ -1,4 +1,4 @@
-package org.zipcode;
+package org.zipcode.service;
 
 import static org.junit.Assert.*
 
@@ -57,7 +57,6 @@ class LocationServiceTest {
 	public void within15Miles() {
 		def zip20850 = locationService.findZipCode('20850')
 		
-
 		def within5MilesOf20850 = locationService.within(zip20850[0], 15.0)
 		
 		print within5MilesOf20850

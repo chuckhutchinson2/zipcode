@@ -1,4 +1,4 @@
-package org.zipcode
+package org.zipcode.service
 
 import org.zipcode.utils.IOUtils
 
@@ -16,9 +16,7 @@ class CSVLoaderTest extends Specification {
 			CSVLoader loader = new CSVLoader()
 		
 			def locations = loader.loader("locations.csv")
-			
-			IOUtils.save (locations, "locations.json")
-		
+					
 		then:
 			def json = JsonOutput.toJson(locations)
 		
