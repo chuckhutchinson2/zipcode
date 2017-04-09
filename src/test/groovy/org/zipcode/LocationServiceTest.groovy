@@ -3,27 +3,34 @@ package org.zipcode;
 import static org.junit.Assert.*
 
 import org.junit.Test
+import org.zipcode.service.LocationService
 import org.zipcode.utils.IOUtils
 
-import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
 
-class LocationParserTest {
+class LocationServiceTest {
+	
+	def locationService 
+	
+	public print(def content) {
+		println (new JsonBuilder(content).toPrettyString())
+	}
 
 	@Test
 	public void findMarylandCities() {
-		def locations = IOUtils.load("locations.json")
+		locationService = new LocationService()
 		
-		def marylandCities = locations.findAll {it.state == 'MD'}
+		def marylandCities = locationService.findCities('MD')
 
-		IOUtils.save(marylandCities, "maryland.json")
+		print marylandCities
 	}
 	
 	@Test
 	public void findZipCode20850() {
-		def locations = IOUtils.load("locations.json")
+		locationService = new LocationService()
 		
-		def zip20850 = locations.findAll {it.zip == '20850'}
-
-		IOUtils.save(zip20850, "20850.json")
+		def zip20850 = locationService.findZipCode('20850')
+		
+		print zip20850
 	}
 }
