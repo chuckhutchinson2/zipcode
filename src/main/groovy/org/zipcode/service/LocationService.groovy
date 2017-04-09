@@ -10,9 +10,8 @@ class LocationService {
 		locations = IOUtils.load("locations.json")
 	}
 	
-	def findAll(def key, def value) {
-		
-		def query = "{ it -> it." + key + " == \'" + value +"\' }";
+	def findAll(def key, def operator, def value) {
+		def query = sprintf('{ it -> it.%s %s \'%s\' }', key, operator, value)
 		
 		return findAll (query)
 	}
@@ -25,11 +24,11 @@ class LocationService {
 	}
  	
 	def findZipCode (def zipCode) {
-		return findAll ('zip', zipCode)
+		return findAll ('zip', '==', zipCode)
 	}
 	
 	def findCities (def stateName) {
-		return findAll ('state', stateName)
+		return findAll ('state', '==', stateName)
 	}
 
 }
