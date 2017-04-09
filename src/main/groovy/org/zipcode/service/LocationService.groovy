@@ -30,6 +30,10 @@ class LocationService {
 		return findAll ('state', '==', stateName)
 	}
 	
+	def within(def location, def distance) {
+		return within(locations, location, distance)
+	}
+	
 	def within(def places, def location, def distance) {
 		
 		return places.findAll { it -> distanceBetween (location, it) < distance }

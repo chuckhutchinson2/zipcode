@@ -43,14 +43,24 @@ class LocationServiceTest {
 	}
 	
 	@Test
-	public void within() {
+	public void within3MilesOf20850() {
 		def zip20850 = locationService.findZipCode('20850')
 		
 		def marylandCities = locationService.findCities('MD')
 		
-		def within5MilesOf20850 = locationService.within(marylandCities, zip20850[0], 3.0)
+		def within3MilesOf20850 = locationService.within(marylandCities, zip20850[0], 3.0)
+		
+		print within3MilesOf20850
+	}
+	
+	@Test
+	public void within15Miles() {
+		def zip20850 = locationService.findZipCode('20850')
+		
+
+		def within5MilesOf20850 = locationService.within(zip20850[0], 15.0)
 		
 		print within5MilesOf20850
-
 	}
+	
 }
