@@ -2,9 +2,9 @@ package org.zipcode;
 
 import static org.junit.Assert.*
 
+import org.junit.Before
 import org.junit.Test
 import org.zipcode.service.LocationService
-import org.zipcode.utils.IOUtils
 
 import groovy.json.JsonBuilder
 
@@ -15,11 +15,21 @@ class LocationServiceTest {
 	public print(def content) {
 		println (new JsonBuilder(content).toPrettyString())
 	}
+	
+	@Before
+	public void setup() {
+		locationService = new LocationService()
+	}
+	
+	@Test
+	public void findAll() {
+		def rockville = locationService.findAll("{ it -> it.state == 'MD' & it.city == 'Rockville' }")
+		
+		print rockville
+	}
 
 	@Test
 	public void findMarylandCities() {
-		locationService = new LocationService()
-		
 		def marylandCities = locationService.findCities('MD')
 
 		print marylandCities
@@ -27,10 +37,20 @@ class LocationServiceTest {
 	
 	@Test
 	public void findZipCode20850() {
-		locationService = new LocationService()
-		
 		def zip20850 = locationService.findZipCode('20850')
 		
 		print zip20850
+	}
+	
+	@Test
+	public void within() {
+		def zip20850 = locationService.findZipCode('20850')
+		
+		def marylandCities = locationService.findCities('MD')
+		
+		def within5MilesOf20850 = locationService.within(marylandCities, zip20850[0], 3.0)
+		
+		print within5MilesOf20850
+
 	}
 }
