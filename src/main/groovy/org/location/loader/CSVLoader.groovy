@@ -1,6 +1,6 @@
-package org.zipcode.loader
+package org.location.loader
 
-import org.zipcode.model.Location
+import org.location.model.Location
 
 class CSVLoader {
 

@@ -1,7 +1,7 @@
-package org.zipcode.service
+package org.location.service
 
-import org.zipcode.model.Location
-import org.zipcode.utils.IOUtils
+import org.location.model.Location
+import org.location.utils.IOUtils
 
 class LocationService {
 	

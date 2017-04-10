@@ -1,4 +1,4 @@
-package org.zipcode.utils
+package org.location.utils
 
 
 import groovy.json.JsonBuilder

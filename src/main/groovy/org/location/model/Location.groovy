@@ -1,4 +1,4 @@
-package org.zipcode.model
+package org.location.model
 
 class Location {
 	String city

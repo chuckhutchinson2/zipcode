@@ -1,10 +1,10 @@
-package org.zipcode.service;
+package org.location.service;
 
 import static org.junit.Assert.*
 
 import org.junit.Before
 import org.junit.Test
-import org.zipcode.service.LocationService
+import org.location.service.LocationService
 
 import groovy.json.JsonBuilder
 
