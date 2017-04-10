@@ -2,7 +2,9 @@ package org.location.service
 
 import org.location.model.Location
 import org.location.utils.IOUtils
+import org.springframework.stereotype.Service
 
+@Service
 class LocationService {
 	
 	def locations
