@@ -36,4 +36,11 @@ class LocationController {
 		log.info("lat " + lat + " lon " + lon + " distance " + distance)
 		return locationService.withinLatLon(lat, lon, distance)
 	}
+	
+	@RequestMapping(value = "/near/{zipCode}/{distance}", method=RequestMethod.GET, produces="application/json", consumes="application/json")
+	public @ResponseBody String near(@PathVariable String zipCode,  @PathVariable Double distance) {
+		def location = locationService.findZipCode(zipCode)
+		
+		return locationService.within(location[0], distance)
+	}
 }
