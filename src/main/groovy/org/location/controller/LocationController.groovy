@@ -32,8 +32,8 @@ class LocationController {
 
 	// /near/38.9896/77.4505/5
 	@RequestMapping(value = "/near/{lat}/{lon}/{distance}", method=RequestMethod.GET, produces="application/json", consumes="application/json")
-	public @ResponseBody String near(@PathVariable String lat, @PathVariable String lon, @PathVariable String distance) {
-		log.info("lat " + lat + " lon " + lon + " distance" + distance)
+	public @ResponseBody String near(@PathVariable String lat, @PathVariable String lon, @PathVariable Double distance) {
+		log.info("lat " + lat + " lon " + lon + " distance " + distance)
 		return locationService.withinLatLon(lat, lon, distance)
 	}
 }
