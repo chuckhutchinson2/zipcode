@@ -2,9 +2,9 @@ FROM chuckh/rhel7-jdk:latest
 
 WORKDIR /opt/
 
-ADD dist/location.tar /opt/
+ADD dist/zipcode.tar /opt/
 
-CMD /opt/location/bin/location
+CMD /opt/zipcode/bin/zipcode
 
 
 

@@ -1,6 +1,8 @@
 package org.location.utils
 
 
+import org.springframework.core.io.ClassPathResource
+
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 
@@ -11,6 +13,6 @@ class IOUtils {
 	}
 
 	static Object load(String filePath) {
-		return new JsonSlurper().parseText(new File(filePath).text)
+		return new JsonSlurper().parseText(new ClassPathResource(filePath).getInputStream().text)
 	}
 }
