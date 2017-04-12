@@ -1,0 +1,1 @@
+docker tag location:latest chuckh/location

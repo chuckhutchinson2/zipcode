@@ -1,0 +1,5 @@
+# build the docker image
+mkdir -p dist
+cp ../build/distributions/location.tar dist
+docker build -t location .
+rm -fr dist
