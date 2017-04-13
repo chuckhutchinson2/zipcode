@@ -125,7 +125,7 @@ public class Application {
           "alpha",      // apiSorter             => alpha
           "schema",     // defaultModelRendering => schema
           UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS,
-          false,        // enableJsonEditor      => true | false
+          true,        // enableJsonEditor      => true | false
           true,         // showRequestHeaders    => true | false
           60000L);      // requestTimeout => in milliseconds, defaults to null (uses jquery xh timeout)
     }
