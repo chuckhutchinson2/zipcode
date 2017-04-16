@@ -89,7 +89,7 @@ public class Application {
           .build();
     }
     @Bean
-    public Docket petApi() {
+    public Docket locationApi() {
       return new Docket(DocumentationType.SWAGGER_2)
           .select()
             .apis(RequestHandlerSelectors.any())
