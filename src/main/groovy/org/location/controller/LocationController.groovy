@@ -21,6 +21,11 @@ class LocationController {
 	@Autowired
 	LocationService locationService
 
+	@RequestMapping(value = "/states", method=RequestMethod.GET, produces="application/json")
+	public @ResponseBody String states() {
+		return JsonOutput.toJson(locationService.getStates())
+	}
+	
 	@RequestMapping(value = "/locations/{zipCode}", method=RequestMethod.GET, produces="application/json")
 	public @ResponseBody String locations(@PathVariable String zipCode) {
 		return JsonOutput.toJson(locationService.findZipCode(zipCode))

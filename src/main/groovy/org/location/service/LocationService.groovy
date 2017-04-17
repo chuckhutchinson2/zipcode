@@ -13,6 +13,10 @@ class LocationService {
 		locations = IOUtils.load("locations.json")
 	}
 	
+	def getStates() {
+		return locations.collect {it -> it.state} as SortedSet
+	}
+	
 	def findAll(def key, def operator, def value) {
 		def query = sprintf('{ it -> it.%s %s \'%s\' }', key, operator, value)
 		
