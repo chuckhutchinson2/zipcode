@@ -29,6 +29,10 @@ class LocationService {
 		return locations.collect {it -> it.state} as SortedSet
 	}
 	
+	def getAll() {
+		return getWeatherCodes(locations)
+	}
+	
 	def findAll(def key, def operator, def value) {
 		def query = sprintf('{ it -> it.%s %s \'%s\' }', key, operator, value)
 		
