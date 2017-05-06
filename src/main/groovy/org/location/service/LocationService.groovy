@@ -2,15 +2,27 @@ package org.location.service
 
 import org.location.model.Location
 import org.location.utils.IOUtils
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
 class LocationService {
 	
+	@Autowired
+	WeatherService weatherService
+
 	def locations
 	
 	LocationService () {
 		locations = IOUtils.load("locations.json")
+	}
+	
+	def setWeatherService(def weatherService) {
+		this.weatherService = weatherService
+	}
+	
+	def getWeatherCodes(def results) {
+		return results.collect { it.weatherCode = weatherService.getWeatherCode(it.city, it.state); it }
 	}
 	
 	def getStates() {
@@ -20,13 +32,17 @@ class LocationService {
 	def findAll(def key, def operator, def value) {
 		def query = sprintf('{ it -> it.%s %s \'%s\' }', key, operator, value)
 		
-		return findAll (query)
+		def results = findAll (query)
+		
+		return getWeatherCodes(results)
 	}
 	
 	def findAll( def query ) {
 		def closure = new GroovyShell().evaluate(query)
 		
-		return locations.findAll ( closure )
+		def results = locations.findAll ( closure )
+		
+		return getWeatherCodes(results)
 	}
  	
 	def findZipCode (def zipCode) {
@@ -51,7 +67,9 @@ class LocationService {
 	}
 	
 	def within(def places, def location, def distance) {
-		return places.findAll { it -> (it.distance = distanceBetween (location, it)) <= distance }
+		def results =  places.findAll { it -> (it.distance = distanceBetween (location, it)) <= distance }
+		
+		return getWeatherCodes(results)
 	}
 
 	def distanceBetween(def loc1, def loc2) {

@@ -2,7 +2,7 @@ package org.location.loader
 
 import org.location.model.Location
 
-class CSVLoader {
+class CSVLocationLoader {
 
 	def loader (def filename) {
 		def locations = [];

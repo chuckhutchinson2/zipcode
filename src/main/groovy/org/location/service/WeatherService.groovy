@@ -21,6 +21,6 @@ class WeatherService {
 	}
 	
 	def getWeatherCode(def city, def state) {
-		return weatherCodes.findAll { it -> (it.state == state && it.city == city)  }.collect {it}.collect {it.weatherCode}
+		return weatherCodes.findAll { it -> (it.state == state && it.city == city)  }.collect {it}.collect {it.weatherCode}.find {true}
 	}
 }
