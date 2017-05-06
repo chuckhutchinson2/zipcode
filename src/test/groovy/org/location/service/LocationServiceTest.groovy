@@ -13,7 +13,7 @@ class LocationServiceTest {
 	def locationService 
 	
 	public print(def content) {
-		println (new JsonBuilder(content).toPrettyString())
+		// println (new JsonBuilder(content).toPrettyString())
 	}
 	
 	@Before
