@@ -1,6 +1,7 @@
 [
     {
         "name": "Alaska",
+        "code": "AK",
         "color": "#ff0000",
         "coordinates": [
             {
@@ -351,6 +352,7 @@
     },
     {
         "name": "Alabama",
+        "code": "AL",
         "color": "#ff0000",
         "coordinates": [
             {
@@ -441,6 +443,7 @@
     },
     {
         "name": "Arkansas",
+        "code": "AR",
         "color": "#ff0000",
         "coordinates": [
             {
@@ -679,6 +682,7 @@
     },
     {
         "name": "Arizona",
+        "code": "AZ",
         "color": "#ff0000",
         "coordinates": [
             {
@@ -1025,6 +1029,7 @@
     },
     {
         "name": "California",
+        "code": "CA",
         "color": "#880000",
         "coordinates": [
             {
@@ -1475,6 +1480,7 @@
     },
     {
         "name": "Colorado",
+        "code": "CO",
         "color": "#880000",
         "coordinates": [
             {
@@ -1501,6 +1507,7 @@
     },
     {
         "name": "Connecticut",
+        "code": "CT",
         "color": "#880000",
         "coordinates": [
             {
@@ -1635,6 +1642,7 @@
     },
     {
         "name": "Delaware",
+        "code": "DE",
         "color": "#880000",
         "coordinates": [
             {
@@ -1717,6 +1725,7 @@
     },
     {
         "name": "Florida",
+        "code": "FL",
         "color": "#8800ff",
         "coordinates": [
             {
@@ -2071,6 +2080,7 @@
     },
     {
         "name": "Georgia",
+        "code": "GA",
         "color": "#880000",
         "coordinates": [
             {
@@ -2365,6 +2375,7 @@
     },
     {
         "name": "Hawaii",
+        "code": "HI",
         "color": "#00ff00",
         "coordinates": [
             {
@@ -2491,6 +2502,7 @@
     },
     {
         "name": "Iowa",
+        "code": "IA",
         "color": "#00ff00",
         "coordinates": [
             {
@@ -2733,6 +2745,7 @@
     },
     {
         "name": "Idaho",
+        "code": "ID",
         "color": "#00ff00",
         "coordinates": [
             {
@@ -3231,6 +3244,7 @@
     },
     {
         "name": "Illinois",
+        "code": "IL",
         "color": "#00ffff",
         "coordinates": [
             {
@@ -3517,6 +3531,7 @@
     },
     {
         "name": "Indiana",
+        "code": "IN",
         "color": "#00ff00",
         "coordinates": [
             {
@@ -3863,6 +3878,7 @@
     },
     {
         "name": "Kansas",
+        "code": "KS",
         "color": "#008800",
         "coordinates": [
             {
@@ -3941,6 +3957,7 @@
     },
     {
         "name": "Kentucky",
+        "code": "KY",
         "color": "#008800",
         "coordinates": [
             {
@@ -4267,6 +4284,7 @@
     },
     {
         "name": "Louisiana",
+        "code": "LA",
         "color": "#008800",
         "coordinates": [
             {
@@ -4709,6 +4727,7 @@
     },
     {
         "name": "Massachusetts",
+        "code": "MA",
         "color": "#0000ff",
         "coordinates": [
             {
@@ -4915,6 +4934,7 @@
     },
     {
         "name": "Maryland",
+        "code": "MD",
         "color": "#0000ff",
         "coordinates": [
             {
@@ -5361,6 +5381,7 @@
     },
     {
         "name": "Maine",
+        "code": "ME",
         "color": "#0000ff",
         "coordinates": [
             {
@@ -5591,6 +5612,7 @@
     },
     {
         "name": "Michigan",
+        "code": "MI",
         "color": "#FF0000",
         "coordinates": [
             {
@@ -6061,6 +6083,7 @@
     },
     {
         "name": "Minnesota",
+        "code": "MN",
         "color": "#0000ff",
         "coordinates": [
             {
@@ -6419,6 +6442,7 @@
     },
     {
         "name": "Missouri",
+        "code": "MO",
         "color": "#000088",
         "coordinates": [
             {
@@ -6685,6 +6709,7 @@
     },
     {
         "name": "Mississippi",
+        "code": "MS",
         "color": "#000088",
         "coordinates": [
             {
@@ -7027,6 +7052,7 @@
     },
     {
         "name": "Montana",
+        "code": "MT",
         "color": "#000088",
         "coordinates": [
             {
@@ -7261,6 +7287,7 @@
     },
     {
         "name": "North Carolina",
+        "code": "NC",
         "color": "#ffff00",
         "coordinates": [
             {
@@ -7507,6 +7534,7 @@
     },
     {
         "name": "North Dakota",
+        "code": "ND",
         "color": "#ffff00",
         "coordinates": [
             {
@@ -7605,6 +7633,7 @@
     },
     {
         "name": "Nebraska",
+        "code": "NE",
         "color": "#ffff00",
         "coordinates": [
             {
@@ -7783,6 +7812,7 @@
     },
     {
         "name": "New Hampshire",
+        "code": "NH",
         "color": "#00ffff",
         "coordinates": [
             {
@@ -8217,6 +8247,7 @@
     },
     {
         "name": "New Jersey",
+        "code": "NJ",
         "color": "#ffff00",
         "coordinates": [
             {
@@ -8439,6 +8470,7 @@
     },
     {
         "name": "New Mexico",
+        "code": "NM",
         "color": "#00ffff",
         "coordinates": [
             {
@@ -8481,6 +8513,7 @@
     },
     {
         "name": "Nevada",
+        "code": "NV",
         "color": "#00ffff",
         "coordinates": [
             {
@@ -8679,6 +8712,7 @@
     },
     {
         "name": "New York",
+        "code": "NY",
         "color": "#00ffff",
         "coordinates": [
             {
@@ -9189,6 +9223,7 @@
     },
     {
         "name": "Ohio",
+        "code": "OH",
         "color": "#ff8800",
         "coordinates": [
             {
@@ -9363,6 +9398,7 @@
     },
     {
         "name": "Oklahoma",
+        "code": "OK",
         "color": "#ff00ff",
         "coordinates": [
             {
@@ -9557,6 +9593,7 @@
     },
     {
         "name": "Oregon",
+        "code": "OR",
         "color": "#ff00ff",
         "coordinates": [
             {
@@ -10063,6 +10100,7 @@
     },
     {
         "name": "Pennsylvania",
+        "code": "PA",
         "color": "#ff00ff",
         "coordinates": [
             {
@@ -10197,6 +10235,7 @@
     },
     {
         "name": "Rhode Island",
+        "code": "RI",
         "color": "#ffff00",
         "coordinates": [
             {
@@ -10283,6 +10322,7 @@
     },
     {
         "name": "South Carolina",
+        "code": "SC",
         "color": "#ff8800",
         "coordinates": [
             {
@@ -10497,6 +10537,7 @@
     },
     {
         "name": "South Dakota",
+        "code": "SD",
         "color": "#ff8800",
         "coordinates": [
             {
@@ -10607,6 +10648,7 @@
     },
     {
         "name": "Tennessee",
+        "code": "TN",
         "color": "#ff8800",
         "coordinates": [
             {
@@ -10841,6 +10883,7 @@
     },
     {
         "name": "Texas",
+        "code": "TX",
         "color": "#00ff88",
         "coordinates": [
             {
@@ -11531,6 +11574,7 @@
     },
     {
         "name": "Utah",
+        "code": "UT",
         "color": "#00ff88",
         "coordinates": [
             {
@@ -11565,6 +11609,7 @@
     },
     {
         "name": "Virginia",
+        "code": "VA",
         "color": "#00ff88",
         "coordinates": [
             {
@@ -12179,6 +12224,7 @@
     },
     {
         "name": "Vermont",
+        "code": "VT",
         "color": "#88ff00",
         "coordinates": [
             {
@@ -12609,6 +12655,7 @@
     },
     {
         "name": "Washington",
+        "code": "WA",
         "color": "#88ff00",
         "coordinates": [
             {
@@ -13107,6 +13154,7 @@
     },
     {
         "name": "Wisconsin",
+        "code": "WI",
         "color": "#0088ff",
         "coordinates": [
             {
@@ -13373,6 +13421,7 @@
     },
     {
         "name": "West Virginia",
+        "code": "WV",
         "color": "#0088ff",
         "coordinates": [
             {
@@ -13759,6 +13808,7 @@
     },
     {
         "name": "Wyoming",
+        "code": "WY",
         "color": "#ff0088",
         "coordinates": [
             {
