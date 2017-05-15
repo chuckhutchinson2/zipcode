@@ -10,7 +10,7 @@ class PlaceService {
 	def places
 	
 	PlaceService() {
-		places = IOUtils.load("state-coordinates.json")
+		places = IOUtils.load("place-coordinates.json")
 	}
 	
 	def getPlaces() {
