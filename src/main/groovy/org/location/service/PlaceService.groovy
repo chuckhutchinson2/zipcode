@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class StateService {
-	def states
+class PlaceService {
+	def places
 	
-	StateService () {
-		states = IOUtils.load("state-coordinates.json")
+	PlaceService() {
+		places = IOUtils.load("state-coordinates.json")
 	}
 	
-	def getStates() {
-		return states.collect {it -> it.code} as SortedSet
+	def getPlaces() {
+		return places.collect {it -> it.code} as SortedSet
 	}
 	
 	def findAll(def key, def operator, def value) {
@@ -26,10 +26,10 @@ class StateService {
 	def findAll( def query ) {
 		def closure = new GroovyShell().evaluate(query)
 		
-		return states.findAll ( closure )
+		return places.findAll ( closure )
 	}
 
-	def findState (def stateName) {
-		return findAll ('code', '==', stateName)
+	def findPlace (def placeCode) {
+		return findAll ('code', '==', placeCode)
 	}
 }

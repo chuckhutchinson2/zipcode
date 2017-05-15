@@ -1,6 +1,6 @@
 package org.location.controller
 
-import org.location.service.StateService
+import org.location.service.PlaceService
 import org.slf4j.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.CrossOrigin
@@ -16,18 +16,18 @@ import groovy.json.JsonOutput
 @Slf4j
 @RestController
 @CrossOrigin(origins = "*")
-class StateController {
+class PlaceController {
 
 	@Autowired
-	StateService stateService
+	PlaceService placeService
 
-	@RequestMapping(value = "/state/states", method=RequestMethod.GET, produces="application/json")
-	public @ResponseBody String states() {
-		return JsonOutput.toJson(stateService.getStates())
+	@RequestMapping(value = "/places", method=RequestMethod.GET, produces="application/json")
+	public @ResponseBody String places() {
+		return JsonOutput.toJson(placeService.getPlaces())
 	}
 
-	@RequestMapping(value = "/state/state/{state}", method=RequestMethod.GET, produces="application/json")
-	public @ResponseBody String cities(@PathVariable String state) {
-		return JsonOutput.toJson(stateService.findState(state))
+	@RequestMapping(value = "/place/{place}", method=RequestMethod.GET, produces="application/json")
+	public @ResponseBody String place(@PathVariable String place) {
+		return JsonOutput.toJson(placeService.findPlace(place))
 	}
 }
