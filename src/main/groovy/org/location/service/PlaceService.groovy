@@ -27,11 +27,6 @@ class PlaceService {
 		} as TimerTask, 600000, 300000)
 	}
 	
-	
-	def printPlaces() {
-		places.each {it -> System.out.println(it.code)} 
-	}
-	
 	def setPlaces(newPlaces) {
 		places = newPlaces
 	}
