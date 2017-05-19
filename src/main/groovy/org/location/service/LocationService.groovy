@@ -5,12 +5,32 @@ import org.location.utils.IOUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
+import groovy.util.logging.Slf4j
+import groovy.util.logging.Slf4j
+
+@Slf4j
 @Service
 class LocationService {
 	def locations
 	
-	LocationService () {
+
+	LocationService() {
 		locations = IOUtils.load("locations.json")
+		
+		new Timer().schedule({
+			try {
+				log.info("loading locations.json")
+				def updatedLocations =  IOUtils.loadUrl("https://raw.githubusercontent.com/chuckhutchinson2/zipcode/master/src/main/resources/locations.json")
+				log.info("loaded locations.json")
+				setLocations(updatedLocations);
+			} catch (RuntimeException e) {
+				log.error("error loading locations", e)
+			}
+		} as TimerTask, 600000, 300000)
+	}
+	
+	def setLocations(updatedLocations) {
+		locations = updatedLocations
 	}
 	
 	def getStates() {

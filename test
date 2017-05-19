@@ -2,3 +2,5 @@
 curl -X GET --header 'Accept: application/json' http://localhost:8080/states
 curl -X GET --header 'Accept: application/json' http://localhost:8080/places
 curl -X GET --header 'Accept: application/json' http://localhost:8080/place/MD
+curl -X GET --header 'Accept: application/json' http://localhost:8080/place/BT
+curl -X GET --header 'Accept: application/json' http://localhost:8080/place/BermudaTriangle

@@ -5,12 +5,35 @@ import org.location.utils.IOUtils
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
+import groovy.util.logging.Slf4j
+
+@Slf4j
 @Service
 class PlaceService {
-	def places
+	static def places
 	
 	PlaceService() {
 		places = IOUtils.load("place-coordinates.json")
+		
+		new Timer().schedule({
+			try {
+				log.info("loading place-coordinates.json")
+				def updatedPlaces =  IOUtils.loadUrl("https://raw.githubusercontent.com/chuckhutchinson2/zipcode/master/src/main/resources/place-coordinates.json")
+				log.info("loaded place-coordinates.json")
+				setPlaces(updatedPlaces);
+			} catch (RuntimeException e) {
+				log.error("error loading place-coordinates.json", e)
+			}
+		} as TimerTask, 600000, 300000)
+	}
+	
+	
+	def printPlaces() {
+		places.each {it -> System.out.println(it.code)} 
+	}
+	
+	def setPlaces(newPlaces) {
+		places = newPlaces
 	}
 	
 	def getPlaces() {
